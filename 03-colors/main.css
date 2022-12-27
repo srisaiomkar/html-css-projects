@@ -1,0 +1,19 @@
+body {
+  background: rgba(131, 197, 233, 0.494);
+}
+
+.container {
+  background: white;
+}
+
+.container h3 {
+  color: #aa1cb2;
+}
+
+.container p {
+  color: green;
+}
+
+.container-special {
+  background-color: rgb(213, 146, 146);
+}
