@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+}
+.navbar {
+  height: 100px;
+}
+
+.navbar .logo {
+  color: red;
+  font-size: 30px;
+}
+
+.container {
+  color: white;
+  background: black;
+  min-height: calc(100vh - 100px);
+}
+
+.container span {
+  color: red;
+  font-size: 3rem;
+}
+
+.read-more-button {
+  color: white;
+  background: red;
+}
