@@ -1,0 +1,32 @@
+div {
+  height: 400px;
+  color: white;
+}
+
+.big-image {
+  background: url("./big-image.jpeg");
+  /* background-repeat: repeat-x; */
+  /* background-repeat: repeat-y; */
+  background-repeat: no-repeat;
+  /* image will occcupy whole div */
+  background-size: cover;
+
+  background-position: center;
+}
+
+.small-image {
+  background: url("./small-image.jpeg");
+  background-repeat: no-repeat;
+  /* image ratio will be exanped as much as possible while while keeping the ratio preserved */
+  /* background-size: contain; */
+
+  /* X% Y% */
+  background-position: 20% 50%;
+}
+
+.folder-image {
+  background: url("./images/folder-image.jpeg");
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
