@@ -74,7 +74,7 @@ body {
 
 .temp {
   min-height: 100vh;
-  background-color: aliceblue;
+  background-color: grey;
 }
 
 @media screen and (min-width: 768px) {
