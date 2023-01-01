@@ -59,13 +59,17 @@ body {
   max-width: 500px;
   margin: 1rem auto;
 }
+.hero-text {
+  animation: move-down 2s;
+}
 
-button {
+.hero-center button {
   background: transparent;
   color: white;
   border: 1px solid white;
   padding: 0.7rem;
   text-transform: uppercase;
+  animation: move-up 2s;
 }
 
 .temp {
@@ -77,5 +81,27 @@ button {
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)),
       url("./jungle.jpeg") center/cover;
+  }
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
