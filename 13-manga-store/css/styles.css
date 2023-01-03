@@ -3,7 +3,7 @@
 Google fonts
 ===========
 */
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Rubik+Bubbles&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Prosto+One&display=swap");
 
 /* 
 ===========
@@ -26,13 +26,13 @@ CSS variables
   --shadow-dark: 10px 10px 5px -4px rgba(0, 0, 0, 0.382);
   --shadow-light: 10px 10px 5px -4px rgba(0, 0, 0, 0.195);
 
-  --letter-spacing: 0.25rem;
+  --letter-spacing: 0.2rem;
   --border-radius: 0.5rem;
 
-  --transition: all 2s ease-in-out;
+  --transition: all 0.2s linear;
 
-  --primary-font: "Dancing Script", cursive;
-  --secondary-font: "Rubik Bubbles", cursive;
+  --primary-font: "Prosto One", cursive;
+  --secondary-font: "Dancing Script", cursive;
 }
 
 /* 
@@ -49,9 +49,10 @@ Global styles
 
 body {
   font-family: var(--primary-font);
-  background: var(--cl-white);
+  background: var(--cl-silver);
   line-height: 1.5;
-  font-size: 0.87rem;
+  font-size: 0.85rem;
+  color: var(--cl-primary);
 }
 
 img {
@@ -86,7 +87,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.87rem;
+  font-size: 1rem;
 }
 
 p {
@@ -94,6 +95,9 @@ p {
 }
 
 @media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
   h1 {
     font-size: 4rem;
   }
@@ -107,7 +111,7 @@ p {
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   h1,
@@ -115,5 +119,111 @@ p {
   h3,
   h4 {
     line-height: 1;
+  }
+}
+
+.btn {
+  color: var(--cl-white);
+  background: var(--cl-primary);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 1rem 0;
+  letter-spacing: var(--letter-spacing);
+}
+
+/* .clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
+/* 
+===========
+header
+===========
+*/
+
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/manga-main.jpg") center/cover no-repeat fixed;
+  position: relative;
+}
+
+.banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner h2 {
+  color: var(--cl-primary-light);
+  font-family: var(--secondary-font);
+}
+
+.banner h3,
+.banner h4 {
+  color: var(--cl-primary-light);
+}
+
+.banner-btn {
+  outline: 0.1rem solid var(--cl-primary-light);
+  outline-offset: 0.2rem;
+}
+
+/* 
+===========
+content divider
+===========
+*/
+
+.content-divider {
+  height: 0.6rem;
+  background: linear-gradient(
+    to right,
+    var(--cl-primary-light),
+    var(--cl-primary),
+    var(--cl-primary-light)
+  );
+}
+
+/* 
+===========
+skills
+===========
+*/
+.skill {
+  text-align: center;
+  padding: 2rem;
+  transition: var(--transition);
+}
+.skill:hover {
+  background: var(--cl-white);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-0.5rem);
+}
+.skill-icon {
+  color: var(--cl-primary-dark);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+@media screen and (min-width: 500px) {
+  .skill {
+    height: 17rem;
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .skill {
+    width: 25%;
   }
 }
