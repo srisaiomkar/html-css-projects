@@ -126,7 +126,7 @@ p {
   color: var(--cl-white);
   background: var(--cl-primary);
   border-radius: var(--border-radius);
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 0.6rem;
   text-transform: uppercase;
   display: inline-block;
   margin: 1rem 0;
@@ -303,7 +303,6 @@ products
 
 @media screen and (min-width: 650px) {
   .product {
-    float: left;
     width: 33.33%;
   }
   .product,
@@ -318,7 +317,71 @@ products
     padding-right: 2rem;
   }
   .product {
-    float: left;
     width: 20%;
+  }
+}
+
+/* 
+===========
+services
+===========
+*/
+.services {
+  text-align: center;
+}
+
+.service-wrap {
+  transition: var(--transition);
+}
+.service {
+  background: var(--cl-silver);
+  text-align: center;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-light);
+}
+
+.service:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-dark);
+}
+
+.service-img {
+  height: 10rem;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.service-content {
+  padding-top: 2rem;
+}
+
+.service-icon-wrap {
+  color: var(--cl-white);
+  background-color: var(--cl-primary-dark);
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 10rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.3rem solid var(--cl-silver);
+}
+
+@media screen and (min-width: 500px) {
+  .service-wrap {
+    float: left;
+    width: 50%;
+    padding: 0 1rem;
+    /* width: 45%;
+    margin-right: 5%; */
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .service-wrap {
+    width: 33.33%;
   }
 }
