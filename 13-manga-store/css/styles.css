@@ -165,6 +165,8 @@ header
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../images/manga-main.jpg") center/cover no-repeat fixed;
   position: relative;
+  /* to avoid horizontal scroll during animation */
+  overflow-x: hidden;
 }
 
 .banner {
@@ -179,6 +181,80 @@ header
 .banner-btn {
   outline: 0.1rem solid var(--cl-primary-light);
   outline-offset: 0.2rem;
+  animation: expand-and-collapse 3s ease-in-out 1;
+}
+
+.banner h2 {
+  animation: slideFromRight 3s linear 1;
+}
+.banner h3 {
+  animation: slideFromLeft 3s ease-in-out 1;
+}
+
+.banner h4 {
+  animation: appear 3s linear 1;
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes expand-and-collapse {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* 
@@ -256,11 +332,11 @@ nav btn
   z-index: 10;
   top: 5%;
   left: 5%;
-  animation: nav 1s ease-in-out alternate infinite;
+  animation: bounce 1s ease-in-out alternate infinite;
   cursor: pointer;
 }
 
-@keyframes nav {
+@keyframes bounce {
   /* 0% {
     transform: scale(1);
   } */
