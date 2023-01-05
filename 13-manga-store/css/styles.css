@@ -183,6 +183,31 @@ header
 
 /* 
 ===========
+nav
+===========
+*/
+
+.nav {
+  color: var(--cl-primary-light);
+  font-size: 2rem;
+  margin: 2rem;
+  position: fixed;
+  z-index: 10;
+  top: 0%;
+  animation: nav 1s ease-in-out alternate infinite;
+}
+
+@keyframes nav {
+  /* 0% {
+    transform: scale(1);
+  } */
+  100% {
+    transform: scale(1.8);
+  }
+}
+
+/* 
+===========
 content divider
 ===========
 */
@@ -355,7 +380,7 @@ services
 }
 
 .service-content {
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .service-icon-wrap {
@@ -373,15 +398,95 @@ services
 @media screen and (min-width: 500px) {
   .service-wrap {
     float: left;
-    width: 50%;
-    padding: 0 1rem;
-    /* width: 45%;
-    margin-right: 5%; */
+    width: 45%;
+    margin-right: 5%;
   }
 }
 
 @media screen and (min-width: 700px) {
   .service-wrap {
-    width: 33.33%;
+    width: 30%;
+    margin-right: 3.33%;
   }
+}
+
+/* 
+===========
+contact
+===========
+*/
+.contact {
+  background: var(--cl-silver);
+}
+.contact p {
+  color: var(--cl-black);
+}
+.contact .address p {
+  max-width: 15rem;
+}
+
+.contact-us {
+  background: var(--cl-white);
+  text-align: center;
+  max-width: 25rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+}
+.contact-us h4 {
+  padding: 0.5rem 0;
+}
+.contact-info i,
+.contact-info span {
+  color: var(--cl-primary-dark);
+}
+.contact-us .contact-us-field {
+  display: block;
+  width: 90%;
+  margin: 1rem auto;
+  background: rgba(216, 212, 212, 0.496);
+  padding: 0.3rem 0 0.3rem 0.5rem;
+  border: none;
+  letter-spacing: var(--letter-spacing);
+  border-radius: var(--border-radius);
+  font-family: var(--primary-font);
+}
+
+.contact-us .btn {
+  width: 100%;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: transparent;
+}
+
+@media screen and (min-width: 600px) {
+  .contact-info,
+  .contact-us {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* 
+===========
+footer
+===========
+*/
+
+footer {
+  background: var(--cl-black);
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--cl-white);
+}
+footer i {
+  color: var(--cl-white);
+  font-size: 1.3rem;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+footer h4 {
+  margin: 0;
+}
+footer h4 span {
+  color: var(--cl-primary);
 }
