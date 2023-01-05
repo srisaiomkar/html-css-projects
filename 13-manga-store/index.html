@@ -19,12 +19,27 @@
     <title>The Manga Store</title>
   </head>
   <body>
-    <!-- nav -->
+    <!-- nav button -->
+    <span class="nav-btn" id="nav-btn">
+      <i class="fa-solid fa-bars"></i>
+    </span>
+    <!-- navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="navbar-header">
+        <span class="nav-close" id="nav-close">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+      </div>
+      <ul class="nav-items">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link">About</a></li>
+        <li><a href="index.html" class="nav-link">Inventory</a></li>
+        <li><a href="index.html" class="nav-link">Services</a></li>
+        <li><a href="index.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
     <!-- header -->
     <header class="header">
-      <div class="nav">
-        <i class="fa-solid fa-bars"></i>
-      </div>
       <div class="banner">
         <div class="section-title">
           <h3>Millions of Original</h3>
@@ -257,9 +272,13 @@
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-linkedin"></i>
-        <h4>&copy; 2023 <span>Manga Store</span> All rights reserved</h4>
+        <h4>
+          &copy; <span id="date"></span> <span>Manga Store</span> All rights
+          reserved
+        </h4>
       </div>
     </footer>
     <!-- end of footer-->
+    <script src="app.js"></script>
   </body>
 </html>

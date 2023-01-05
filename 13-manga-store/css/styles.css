@@ -183,18 +183,81 @@ header
 
 /* 
 ===========
-nav
+nav bar
+===========
+*/
+.navbar {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  background: var(--cl-white);
+  box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.195);
+  transition: var(--transition);
+  transform: translateX(-100%);
+}
+
+.showNav {
+  transform: translate(0);
+}
+.nav-items {
+  padding-bottom: 1rem;
+}
+.nav-link {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  color: var(--cl-gray);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background: var(--cl-primary-light);
+  color: var(--cl-primary-dark);
+  border-left: 0.25rem solid var(--cl-primary-dark);
+  padding-left: 1rem;
+}
+
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+.nav-close {
+  color: rgba(255, 0, 0, 0.467);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-close:hover {
+  color: red;
+}
+.nav-items {
+  list-style: none;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    width: 30vw;
+    height: 100vh;
+    max-width: 20rem;
+  }
+}
+/* 
+===========
+nav btn
 ===========
 */
 
-.nav {
+.nav-btn {
   color: var(--cl-primary-light);
   font-size: 2rem;
-  margin: 2rem;
   position: fixed;
   z-index: 10;
-  top: 0%;
+  top: 5%;
+  left: 5%;
   animation: nav 1s ease-in-out alternate infinite;
+  cursor: pointer;
 }
 
 @keyframes nav {
