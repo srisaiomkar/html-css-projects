@@ -1,0 +1,157 @@
+/* 
+===========
+Google fonts
+===========
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Prosto+One&display=swap");
+
+/* 
+===========
+CSS variables
+===========
+*/
+:root {
+  /* dark shades of primary color */
+  --cl-primary-1: #006422;
+  --cl-primary-2: #1a7438;
+  --cl-primary-3: #33834e;
+  --cl-primary-4: #4d9364;
+  /* primary main color */
+  --cl-primary-5: #66a27a;
+  /* lighter shades of primary color */
+  --cl-primary-6: #80b291;
+  --cl-primary-7: #99c1a7;
+  --cl-primary-8: #b3d1bd;
+  --cl-primary-9: #cce0d3;
+  --cl-primary-10: #e6f0e9;
+  /* for heading  */
+  --cl-gray-1: #808080;
+  --cl-gray-2: #888888;
+  --cl-gray-3: #909090;
+  --cl-gray-4: #989898;
+  /* for paragraphs */
+  --cl-gray-5: #A0A0A0;
+  --cl-gray-6: #A8A8A8;
+  --cl-gray-7: #B8B8B8;
+  --cl-gray-8: #BEBEBE;
+  --cl-gray-9: #C0C0C0;
+  --cl-gray-10: #D3D3D3;
+  --cl-white: #ffffff;
+  --cl-black: #111111;
+
+  --fluid-width: 90vw;
+  --max-width: 1170px;
+
+  --shadow-dark: 10px 10px 5px -4px rgba(0, 0, 0, 0.382);
+  --shadow-light: 10px 10px 5px -4px rgba(0, 0, 0, 0.195);
+
+  --letter-spacing: 0.2rem;
+  --border-radius: 0.5rem;
+
+  --transition: all 0.2s linear;
+
+  --primary-font: "Prosto One", cursive;
+  --secondary-font: "Dancing Script", cursive;
+}
+
+/* 
+===========
+Global styles
+===========
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  line-height: 1.5;
+  font-size: 0.85rem;
+  color: var(--cl-primary);
+  background: var(--cl-white);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+
+.btn {
+  color: var(--cl-white);
+  background: var(--cl-primary);
+  border-radius: var(--border-radius);
+  padding: 0.6rem 0.6rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 1rem 0;
+  letter-spacing: var(--letter-spacing);
+}
+
+/* 
