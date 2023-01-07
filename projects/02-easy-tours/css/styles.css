@@ -30,12 +30,12 @@ CSS variables
   --cl-gray-3: #909090;
   --cl-gray-4: #989898;
   /* for paragraphs */
-  --cl-gray-5: #A0A0A0;
-  --cl-gray-6: #A8A8A8;
-  --cl-gray-7: #B8B8B8;
-  --cl-gray-8: #BEBEBE;
-  --cl-gray-9: #C0C0C0;
-  --cl-gray-10: #D3D3D3;
+  --cl-gray-5: #a0a0a0;
+  --cl-gray-6: #a8a8a8;
+  --cl-gray-7: #b8b8b8;
+  --cl-gray-8: #bebebe;
+  --cl-gray-9: #c0c0c0;
+  --cl-gray-10: #d3d3d3;
   --cl-white: #ffffff;
   --cl-black: #111111;
 
@@ -63,7 +63,7 @@ Global styles
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 body {
@@ -91,7 +91,6 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  margin-top: 0.75rem;
 }
 
 h1 {
@@ -112,6 +111,7 @@ h4 {
 
 p {
   margin-bottom: 1rem;
+  color: var(--cl-gray-5);
 }
 
 @media screen and (min-width: 800px) {
@@ -142,11 +142,11 @@ p {
   }
 }
 
-
 .btn {
   color: var(--cl-white);
-  background: var(--cl-primary);
+  background: var(--cl-primary-5);
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
   padding: 0.6rem 0.6rem;
   text-transform: uppercase;
   display: inline-block;
@@ -154,4 +154,175 @@ p {
   letter-spacing: var(--letter-spacing);
 }
 
+.section {
+  padding: 2rem 0;
+}
+
+.section-center {
+  width: var(--fluid-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-title {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.section-title h2,
+.section-title span {
+  text-transform: uppercase;
+}
+
+.section-title span {
+  color: var(--cl-primary-4);
+}
+
 /* 
+
+/* 
+===========
+Hero
+===========
+*/
+
+.hero {
+  background: var(--cl-primary-5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-banner {
+  text-align: center;
+  color: var(--cl-white);
+}
+
+.hero-banner h1 {
+  text-transform: uppercase;
+}
+
+.hero-banner p {
+  color: var(--cl-white);
+}
+
+.hero-btn {
+  color: var(--cl-primary-5);
+  background: var(--cl-white);
+  border-radius: 0;
+  padding: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.hero-btn:hover {
+  background: var(--cl-primary-1);
+  color: var(--cl-white);
+  border: 0.1rem solid var(--cl-white);
+}
+
+@media screen and (min-width: 600px) {
+  .hero {
+    background: linear-gradient(rgb(0, 100, 34, 0.3), rgb(0, 100, 34, 0.3)),
+      url("../images/tour-main.jpeg") center/cover;
+  }
+}
+
+/* 
+===========
+About
+===========
+*/
+
+.about-center {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about-img-wrapper,
+.about-content {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 900px) {
+  .about-img-wrapper,
+  .about-content {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+  }
+  .about-content {
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .about-img-wrapper {
+    position: relative;
+  }
+  .about-img-wrapper::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid var(--cl-primary-5);
+    top: -1rem;
+    left: -1rem;
+    position: absolute;
+    opacity: 1;
+    z-index: -1;
+    /* "*" does not work for before and after 
+    Use  box-sizing: border-box to avoid extra space due to border */
+    box-sizing: border-box;
+  }
+}
+
+/* 
+===========
+Services
+===========
+*/
+
+#services {
+  background: var(--cl-primary-10);
+}
+
+.service {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-info {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.service-icon {
+  background: var(--cl-primary-5);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  max-width: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .services-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .service {
+    flex: 0 0 calc(33.33% - 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .service-icon {
+    flex: 0 0 calc(20% - 2rem);
+    align-self: flex-start;
+  }
+  .service-info {
+    flex: 0 0 calc(80% - 2rem);
+    text-align: left;
+  }
+}
