@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  border: 2px solid red;
+}
+
+.cell {
+  padding: 2rem;
+  color: wheat;
+  text-align: center;
+}
+
+.cell-1 {
+  background: blue;
+}
+.cell-2 {
+  background: green;
+}
+.cell-3 {
+  background: violet;
+}
+.cell-4 {
+  background: purple;
+}
+.cell-5 {
+  background: orange;
+}
+.cell-6 {
+  background: darkblue;
+}
+
+.flex-container {
+  border: 3px solid black;
+}
