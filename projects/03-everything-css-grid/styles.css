@@ -97,7 +97,6 @@ h4 {
   letter-spacing: var(--letter-spacing);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75rem;
 }
 
 .btn {
@@ -135,7 +134,7 @@ navbar
 .nav-link {
   padding: 1rem;
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--cl-primary-3);
   transition: var(--transition);
   cursor: pointer;
@@ -328,5 +327,100 @@ Cards
   }
   .tile-9 {
     grid-area: i;
+  }
+}
+
+/* 
+===========
+Layout
+===========
+*/
+
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
+}
+
+.layout-header {
+  background: var(--cl-primary-5);
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+}
+
+.layout-body {
+  padding: 1rem;
+}
+
+.layout-social-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem 0;
+  background: var(--cl-primary-5);
+}
+.layout-social-links li {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.layout-footer {
+  background-color: var(--cl-black);
+  color: var(--cl-white);
+  text-align: center;
+  padding: 1rem 0;
+}
+.layout-navbar {
+  background: var(--cl-gray-10);
+}
+.layout-navbar a {
+  display: block;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--cl-primary-5);
+  border-bottom: 0.1rem solid var(--cl-primary-1);
+}
+
+.layout-navbar a:hover {
+  color: var(--cl-primary-1);
+}
+
+@media screen and (min-width: 700px) {
+  .layout-navbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+  .layout-navbar a {
+    border-bottom: none;
+  }
+}
+@media screen and (min-width: 900px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 200px auto 50px;
+    grid-template-rows: auto 1fr auto;
+  }
+  .layout-header {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+  .layout-navbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .layout-social-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+  }
+
+  .layout-footer {
+    grid-row: 3/4;
+    grid-column: 1/-1;
   }
 }
