@@ -1,0 +1,147 @@
+/* 
+===========
+CSS variables
+===========
+*/
+:root {
+  /* dark shades of primary color */
+  --cl-primary-1: #006422;
+  --cl-primary-2: #1a7438;
+  --cl-primary-3: #33834e;
+  --cl-primary-4: #4d9364;
+  /* primary main color */
+  --cl-primary-5: #66a27a;
+  /* lighter shades of primary color */
+  --cl-primary-6: #80b291;
+  --cl-primary-7: #99c1a7;
+  --cl-primary-8: #b3d1bd;
+  --cl-primary-9: #cce0d3;
+  --cl-primary-10: #e6f0e9;
+  /* for heading  */
+  --cl-gray-1: #808080;
+  --cl-gray-2: #888888;
+  --cl-gray-3: #909090;
+  --cl-gray-4: #989898;
+  /* for paragraphs */
+  --cl-gray-5: #a0a0a0;
+  --cl-gray-6: #a8a8a8;
+  --cl-gray-7: #b8b8b8;
+  --cl-gray-8: #bebebe;
+  --cl-gray-9: #c0c0c0;
+  --cl-gray-10: #d3d3d3;
+  --cl-white: #ffffff;
+  --cl-black: #111111;
+
+  --fluid-width: 90vw;
+  --max-width: 1170px;
+
+  --shadow-dark: 10px 10px 5px -4px rgba(0, 0, 0, 0.382);
+  --shadow-light: 10px 10px 5px -4px rgba(0, 0, 0, 0.195);
+
+  --letter-spacing: 0.1rem;
+  --border-radius: 0.5rem;
+
+  --transition: all 0.2s linear;
+
+  --primary-font: "Anton", sans-serif;
+}
+
+/* 
+===========
+Global styles
+===========
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  line-height: 1.5;
+  font-size: 0.85rem;
+  color: var(--cl-primary);
+  background: var(--cl-white);
+  letter-spacing: var(--letter-spacing);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.btn {
+  display: inline-block;
+  text-transform: capitalize;
+  color: var(--cl-primary-5);
+  border: 0.2rem solid var(--cl-primary-5);
+  padding: 0.5rem;
+  transition: var(--transition);
+  margin: 2rem;
+}
+
+.btn:hover {
+  color: var(--cl-white);
+  background: var(--cl-primary-5);
+}
+
+/* 
+===========
+navbar
+===========
+*/
+
+.navbar {
+  background: var(--cl-gray-9);
+}
+
+.nav-center {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: var(--transition);
+}
+.nav-link {
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--cl-primary-3);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 0.1rem solid var(--cl-primary-5);
+}
+
+.nav-link:hover {
+  color: var(--cl-primary-1);
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav-link {
+    border: none;
+    text-align: center;
+  }
+}
