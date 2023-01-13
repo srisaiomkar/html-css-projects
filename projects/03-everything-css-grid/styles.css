@@ -80,6 +80,12 @@ li {
   list-style: none;
 }
 
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.3rem;
+}
 h1,
 h2,
 h3,
@@ -143,5 +149,31 @@ navbar
   .nav-link {
     border: none;
     text-align: center;
+  }
+}
+
+/* 
+===========
+Hero
+===========
+*/
+
+.hero {
+  background: var(--cl-primary-3);
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.hero-content {
+  width: 90vw;
+  max-width: 30rem;
+}
+
+@media screen and (min-width: 500px) {
+  .hero {
+    background: linear-gradient(rgba(128, 178, 145, 0.5), rgba(0, 0, 0, 0.2)),
+      url("./images/1.jpg") center/cover fixed no-repeat;
   }
 }
