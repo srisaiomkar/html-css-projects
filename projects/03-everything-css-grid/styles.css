@@ -259,3 +259,74 @@ Cards
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
 }
+
+/* 
+===========
+Cards
+===========
+*/
+
+.tiles {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.tiles-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
+  gap: 2rem;
+}
+.tiles-center article {
+  height: 20rem;
+}
+.tiles-center img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1400px) {
+  .tiles-center {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+  }
+  .tiles-center article {
+    height: 100%;
+  }
+
+  .tile-1 {
+    grid-area: a;
+  }
+  .tile-2 {
+    grid-area: b;
+  }
+  .tile-3 {
+    grid-area: c;
+  }
+  .tile-4 {
+    grid-area: d;
+  }
+  .tile-5 {
+    grid-area: e;
+  }
+  .tile-6 {
+    grid-area: f;
+  }
+  .tile-7 {
+    grid-area: g;
+  }
+  .tile-8 {
+    grid-area: h;
+  }
+  .tile-9 {
+    grid-area: i;
+  }
+}
